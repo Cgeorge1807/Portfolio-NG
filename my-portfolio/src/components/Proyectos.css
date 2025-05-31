@@ -1,0 +1,29 @@
+/* Fondo de la sección Proyectos */
+.proyectos-bg {
+  position: relative;
+  min-height: 100vh; /* Abarca toda la altura del viewport */
+  background-image: url('https://whiplash.brandsmith.es/wp-content/uploads/2023/12/Whiplash_315_Diseno-grafico-AI-2.jpg');
+  background-size: cover;
+  background-position: center;
+  overflow: hidden;
+  padding-top: 50px;
+}
+
+/* Overlay con efecto oscuridad y desenfoque */
+.proyectos-bg::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.70); /* Nivel de transparencia similar al hero */
+  backdrop-filter: blur(5px);       /* Efecto de desenfoque */
+  z-index: 1; /* Este overlay se sitúa por debajo del contenido */
+}
+
+.card-text {
+  font-size: smaller; /* O un valor específico como 0.8em, 12px, etc. */
+  color: black;
+  /* Puedes añadir aquí otros estilos que ya tengas para .card-text */
+}

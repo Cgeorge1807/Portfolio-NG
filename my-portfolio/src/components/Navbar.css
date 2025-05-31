@@ -1,0 +1,53 @@
+/* Estilos para el navbar */
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 60px;
+  background-color: rgba(0, 0, 0, 0.80);
+  backdrop-filter: blur(10px);
+  z-index: 1000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px 30px;
+}
+
+.navbar-inner {
+  width: 100%;
+  max-width: 1200px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  
+}
+
+.logo {
+  color: #06dacf;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  margin: 0;
+  padding: 0;
+  gap: 20px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: white;
+  font-size: 20px;
+  font-weight: bold;
+  padding: 12px 20px;
+  transition: all 0.3s ease-in-out;
+  position: relative;
+}
+
+.nav-links a:hover {
+  color: #06dacf;
+  text-shadow: 1px 1px 12px rgba(0, 247, 255, 0.9);
+}
