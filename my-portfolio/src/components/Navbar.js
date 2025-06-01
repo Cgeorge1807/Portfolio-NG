@@ -1,20 +1,27 @@
 import React from "react";
-import "./Navbar.css";  // Importa los estilos del navbar
+import { Link } from "react-router-dom"; 
+import "./Navbar.css";
 
 function Navbar() {
   return (
     <nav className="navbar">
       <div className="navbar-inner">
-        <h2 className="logo">NG-Logo-nic</h2>
+        <div className="logo-container">
+          <img 
+            src="https://res.cloudinary.com/dciy2gw7z/image/upload/v1748757253/covftqbhft0vzzikm1gc.png" 
+            alt="Logo NIC"
+            className="logo"
+          />
+        </div>
         <ul className="nav-links">
           <li>
-            <a href="#home">Inicio</a>
+            <Link to="/">Inicio</Link> 
           </li>
           <li>
-            <a href="#projects">Proyectos</a>
+            <Link to="/proyectos">Proyectos</Link>
           </li>
           <li>
-            <a href="#contact">Contacto</a>
+            <Link to="/contact">Contacto</Link>
           </li>
         </ul>
       </div>

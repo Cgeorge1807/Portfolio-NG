@@ -1,40 +1,54 @@
-/* Estilos para el navbar */
+/* Ajustes generales para el navbar */
 .navbar {
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
-  height: 60px;
+  height: 65px;
   background-color: rgba(0, 0, 0, 0.80);
   backdrop-filter: blur(10px);
   z-index: 1000;
   display: flex;
-  justify-content: center;
+  justify-content: space-between; /* Logo a la izquierda, enlaces a la derecha */
   align-items: center;
   padding: 10px 30px;
+  
 }
 
+/* Contenedor interno */
 .navbar-inner {
   width: 100%;
   max-width: 1200px;
   display: flex;
+  margin-left: 350px;
   justify-content: space-between;
-  align-items: center;
-  
+  align-items: center; /* Corrige la alineación */
 }
 
+/* Contenedor del logo alineado a la izquierda */
+.logo-container {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex-grow: 1;
+  height: 100%;
+}
+
+/* Estilos del logo */
 .logo {
-  color: #06dacf;
-  font-size: 24px;
-  font-weight: bold;
+  width: 180px;
+  max-height: 180px;
+  object-fit: contain;
+  margin-top: -10px; /* Lo sube 10px */
 }
 
+/* Contenedor de los enlaces alineados a la derecha */
 .nav-links {
   list-style: none;
   display: flex;
-  margin: 0;
-  padding: 0;
-  gap: 20px;
+  align-items: center;
+  justify-content: flex-end; /* Empuja los enlaces más hacia la derecha */
+  flex-grow: 2; /* Espacio adicional para los enlaces */
 }
 
 .nav-links a {
@@ -42,12 +56,13 @@
   color: white;
   font-size: 20px;
   font-weight: bold;
-  padding: 12px 20px;
+  padding: 10px 20px; /* Ajustamos el padding para mejorar la distribución */
   transition: all 0.3s ease-in-out;
   position: relative;
 }
 
 .nav-links a:hover {
-  color: #06dacf;
-  text-shadow: 1px 1px 12px rgba(0, 247, 255, 0.9);
+  color: #9b0532; /* Color exacto */
+  text-shadow: 0px 0px 20px rgba(155, 5, 50, 1),     
+               0px 0px 60px rgba(155, 5, 50, 0.8); /* Brillo más intenso del mismo tono */
 }
