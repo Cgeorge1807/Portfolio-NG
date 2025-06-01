@@ -1,10 +1,25 @@
 import React from "react";
-import { Routes, Route, Link } from "react-router-dom";
+import { Routes, Route, Link } from "react-router-dom"; // Asegúrate de que Link esté importado
 
 import "bootstrap/dist/css/bootstrap.min.css";
-import "./App.css";   
+import "./App.css";
 import Navbar from "./Navbar";
 import Proyectos from "./Proyectos";
+import Contacto from "./Contacto";
+
+// Datos de ejemplo para el componente Contacto
+const clienteInfo = {
+  nombre: 'Nombre del Cliente',
+  descripcion:
+    'Una breve descripción sobre mi cliente y su trabajo.',
+};
+
+const redesSocialesInfo = [
+  { nombre: 'LinkedIn', enlace: 'https://www.linkedin.com/in/tucliente' },
+  { nombre: 'Twitter', enlace: 'https://twitter.com/tucliente' },
+  { nombre: 'Sitio Web', enlace: 'https://www.sitiowebdelcliente.com' },
+  // Añade más redes sociales aquí
+];
 
 
 function Home() {
@@ -17,7 +32,10 @@ function Home() {
           <Link to="/proyectos">
             <button className="cta-button">Explorar proyectos</button>
           </Link>
-          <button className="cta-button">Contacta conmigo!</button>
+          {/* ¡Aquí está el cambio! Usamos Link para navegar a /contacto */}
+          <Link to="/contacto">
+            <button className="cta-button">Contacta conmigo!</button>
+          </Link>
         </div>
       </div>
     </header>
@@ -27,10 +45,12 @@ function Home() {
 function App() {
   return (
     <>
-      <Navbar/>
+      <Navbar />
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/proyectos" element={<Proyectos/>}/>
+        <Route path="/proyectos" element={<Proyectos />} />
+        {/* ¡Aquí está la nueva ruta para el componente Contacto! */}
+        <Route path="/contacto" element={<Contacto cliente={clienteInfo} redesSociales={redesSocialesInfo} />} />
       </Routes>
     </>
   );

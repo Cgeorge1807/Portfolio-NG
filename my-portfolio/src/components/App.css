@@ -63,10 +63,18 @@ p {
   transition: all 0.3s ease-in-out;
   border: 2px solid white;
   box-shadow: 2px 2px 15px rgba(0, 0, 0, 0.4);
+  /* *** SOLUCIÓN PARA LAS LÍNEAS AZULES *** */
+  text-decoration: none; /* Asegura que el botón no tenga subrayado si está dentro de un Link */
 }
 
 .cta-button:hover {
   background: linear-gradient(90deg, #021046, #021046); /* Mantiene el mismo color en hover */
   transform: scale(1.1);
   box-shadow: 0px 4px 20px rgba(255, 255, 255, 0.2);
+}
+
+/* *** REGLA ESPECÍFICA PARA LOS LINKS DENTRO DE CTA-CONTAINER *** */
+/* Esto es importante si el Link envuelve el botón y no quieres que el enlace tenga subrayado */
+.cta-container a {
+    text-decoration: none;
 }
