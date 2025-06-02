@@ -1,27 +1,40 @@
-import React from "react";
-import { Link } from "react-router-dom"; 
+import React, { useState } from "react";
+import { Link } from "react-router-dom";
 import "./Navbar.css";
 
 function Navbar() {
+  const [isOpen, setIsOpen] = useState(false); // Estado para controlar si el menú móvil está abierto
+
+  const toggleMenu = () => {
+    setIsOpen(!isOpen);
+  };
+
   return (
     <nav className="navbar">
       <div className="navbar-inner">
         <div className="logo-container">
-          <img 
-            src="https://res.cloudinary.com/dciy2gw7z/image/upload/v1748757253/covftqbhft0vzzikm1gc.png" 
+          <img
+            src="https://res.cloudinary.com/dciy2gw7z/image/upload/v1748757253/covftqbhft0vzzikm1gc.png"
             alt="Logo NIC"
             className="logo"
           />
         </div>
-        <ul className="nav-links">
+        {/* Botón de hamburguesa para móviles */}
+        <div className="hamburger" onClick={toggleMenu}>
+          <div className="bar"></div>
+          <div className="bar"></div>
+          <div className="bar"></div>
+        </div>
+        {/* Los enlaces de navegación ahora tienen una clase condicional */}
+        <ul className={`nav-links ${isOpen ? "open" : ""}`}>
           <li>
-            <Link to="/">Inicio</Link> 
+            <Link to="/" onClick={() => setIsOpen(false)}>Inicio</Link>
           </li>
           <li>
-            <Link to="/proyectos">Proyectos</Link>
+            <Link to="/proyectos" onClick={() => setIsOpen(false)}>Proyectos</Link>
           </li>
           <li>
-            <Link to="/contacto">Contacto</Link>
+            <Link to="/contacto" onClick={() => setIsOpen(false)}>Contacto</Link>
           </li>
         </ul>
       </div>

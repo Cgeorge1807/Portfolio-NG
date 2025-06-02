@@ -61,6 +61,122 @@ const DataProyectos = [
     
     repoUrl: null,
   },
+  {
+    id: 'impresion-3d', // Un ID único y legible
+    title: 'Impresión 3D: Prototipado Rápido',
+    tagline: 'Transformando ideas en objetos tangibles.',
+    description: 'Este proyecto se centró en el prototipado rápido y la fabricación de piezas personalizadas utilizando tecnología de impresión 3D FDM. Exploramos el diseño paramétrico y la optimización de geometrías para la funcionalidad y la estética.',
+    problem: 'La necesidad de crear prototipos funcionales y económicos en poco tiempo para validar conceptos de diseño y reducir los ciclos de desarrollo de productos.',
+    solution: 'Implementamos un flujo de trabajo ágil desde el modelado 3D (CAD) hasta la impresión, seleccionando materiales apropiados (PLA, PETG) y optimizando los parámetros de impresión para cada caso específico.',
+    // ¡CAMBIA ESTAS RUTAS PARA QUE COINCIDAN CON TU ESTRUCTURA REAL!
+    moodboard: null, // Si no tienes moodboard para este proyecto, déjalo null o ajusta la ruta si tienes uno específico
+    wireframes: [], // Puede estar vacío si no aplica
+    finalDesign: [
+      '/Imagenes/Proyecto1/3-1.png', // <--- Ajusta esta ruta
+      '/Imagenes/Proyecto1/Impresion.png',             // <--- Ajusta esta ruta
+      // Si tuvieras más imágenes de este proyecto en Proyecto1, las agregarías aquí
+    ],
+    colors: {
+      'Primario': '#3498DB',
+      'Secundario': '#E74C3C',
+      'Acento': '#2ECC71',
+    },
+    typography: {
+      'Título': 'Roboto, sans-serif',
+      'Cuerpo': 'Open Sans, sans-serif',
+    },
+    technologies: ['Fusion 360', 'PrusaSlicer', 'Impresoras FDM'],
+    myRole: 'Diseñador 3D, Operador de Impresora 3D, Post-procesado.',
+    liveDemo: null,
+    repoUrl: null,
+  },
+  {
+    id: 'impresion-3d', // Un ID único y legible
+    title: 'Impresión 3D: Prototipado Rápido',
+    tagline: 'Transformando ideas en objetos tangibles.',
+    description: 'Este proyecto se centró en el prototipado rápido y la fabricación de piezas personalizadas utilizando tecnología de impresión 3D FDM. Exploramos el diseño paramétrico y la optimización de geometrías para la funcionalidad y la estética.',
+    problem: 'La necesidad de crear prototipos funcionales y económicos en poco tiempo para validar conceptos de diseño y reducir los ciclos de desarrollo de productos.',
+    solution: 'Implementamos un flujo de trabajo ágil desde el modelado 3D (CAD) hasta la impresión, seleccionando materiales apropiados (PLA, PETG) y optimizando los parámetros de impresión para cada caso específico.',
+    // ¡CAMBIA ESTAS RUTAS PARA QUE COINCIDAN CON TU ESTRUCTURA REAL!
+    moodboard: null, // Si no tienes moodboard para este proyecto, déjalo null o ajusta la ruta si tienes uno específico
+    wireframes: [], // Puede estar vacío si no aplica
+    finalDesign: [
+      '/Imagenes/Proyecto1/3-1.png', // <--- Ajusta esta ruta
+      '/Imagenes/Proyecto1/Impresion.png',             // <--- Ajusta esta ruta
+      // Si tuvieras más imágenes de este proyecto en Proyecto1, las agregarías aquí
+    ],
+    colors: {
+      'Primario': '#3498DB',
+      'Secundario': '#E74C3C',
+      'Acento': '#2ECC71',
+    },
+    typography: {
+      'Título': 'Roboto, sans-serif',
+      'Cuerpo': 'Open Sans, sans-serif',
+    },
+    technologies: ['Fusion 360', 'PrusaSlicer', 'Impresoras FDM'],
+    myRole: 'Diseñador 3D, Operador de Impresora 3D, Post-procesado.',
+    liveDemo: null,
+    repoUrl: null,
+  },
+  {
+    id: 'impresion-3d', // Un ID único y legible
+    title: 'Impresión 3D: Prototipado Rápido',
+    tagline: 'Transformando ideas en objetos tangibles.',
+    description: 'Este proyecto se centró en el prototipado rápido y la fabricación de piezas personalizadas utilizando tecnología de impresión 3D FDM. Exploramos el diseño paramétrico y la optimización de geometrías para la funcionalidad y la estética.',
+    problem: 'La necesidad de crear prototipos funcionales y económicos en poco tiempo para validar conceptos de diseño y reducir los ciclos de desarrollo de productos.',
+    solution: 'Implementamos un flujo de trabajo ágil desde el modelado 3D (CAD) hasta la impresión, seleccionando materiales apropiados (PLA, PETG) y optimizando los parámetros de impresión para cada caso específico.',
+    // ¡CAMBIA ESTAS RUTAS PARA QUE COINCIDAN CON TU ESTRUCTURA REAL!
+    moodboard: null, // Si no tienes moodboard para este proyecto, déjalo null o ajusta la ruta si tienes uno específico
+    wireframes: [], // Puede estar vacío si no aplica
+    finalDesign: [
+      '/Imagenes/Proyecto1/3-1.png', // <--- Ajusta esta ruta
+      '/Imagenes/Proyecto1/Impresion.png',             // <--- Ajusta esta ruta
+      // Si tuvieras más imágenes de este proyecto en Proyecto1, las agregarías aquí
+    ],
+    colors: {
+      'Primario': '#3498DB',
+      'Secundario': '#E74C3C',
+      'Acento': '#2ECC71',
+    },
+    typography: {
+      'Título': 'Roboto, sans-serif',
+      'Cuerpo': 'Open Sans, sans-serif',
+    },
+    technologies: ['Fusion 360', 'PrusaSlicer', 'Impresoras FDM'],
+    myRole: 'Diseñador 3D, Operador de Impresora 3D, Post-procesado.',
+    liveDemo: null,
+    repoUrl: null,
+  },
+  {
+    id: 'impresion-3d', // Un ID único y legible
+    title: 'Impresión 3D: Prototipado Rápido',
+    tagline: 'Transformando ideas en objetos tangibles.',
+    description: 'Este proyecto se centró en el prototipado rápido y la fabricación de piezas personalizadas utilizando tecnología de impresión 3D FDM. Exploramos el diseño paramétrico y la optimización de geometrías para la funcionalidad y la estética.',
+    problem: 'La necesidad de crear prototipos funcionales y económicos en poco tiempo para validar conceptos de diseño y reducir los ciclos de desarrollo de productos.',
+    solution: 'Implementamos un flujo de trabajo ágil desde el modelado 3D (CAD) hasta la impresión, seleccionando materiales apropiados (PLA, PETG) y optimizando los parámetros de impresión para cada caso específico.',
+    // ¡CAMBIA ESTAS RUTAS PARA QUE COINCIDAN CON TU ESTRUCTURA REAL!
+    moodboard: null, // Si no tienes moodboard para este proyecto, déjalo null o ajusta la ruta si tienes uno específico
+    wireframes: [], // Puede estar vacío si no aplica
+    finalDesign: [
+      '/Imagenes/Proyecto1/3-1.png', // <--- Ajusta esta ruta
+      '/Imagenes/Proyecto1/Impresion.png',             // <--- Ajusta esta ruta
+      // Si tuvieras más imágenes de este proyecto en Proyecto1, las agregarías aquí
+    ],
+    colors: {
+      'Primario': '#3498DB',
+      'Secundario': '#E74C3C',
+      'Acento': '#2ECC71',
+    },
+    typography: {
+      'Título': 'Roboto, sans-serif',
+      'Cuerpo': 'Open Sans, sans-serif',
+    },
+    technologies: ['Fusion 360', 'PrusaSlicer', 'Impresoras FDM'],
+    myRole: 'Diseñador 3D, Operador de Impresora 3D, Post-procesado.',
+    liveDemo: null,
+    repoUrl: null,
+  },
   // ... más proyectos
 ];
 

@@ -1,4 +1,4 @@
-/* src/components/SobreMi.css */
+/* src/components/Contacto.css */
 
 .sobre-mi-section {
   position: relative;
@@ -9,10 +9,9 @@
   justify-content: center;
   align-items: center;
   overflow: hidden;
-  /* Puedes añadir una imagen de fondo aquí si quieres que sea como el hero */
-  /* background-image: url('https://img.freepik.com/fotos-premium/fondo-pantalla-hd-abstracto-diseno-color-degradado-violeta-liquido-metal-color-violeta-brillante-metal_542608-95.jpg'); */
-  /* background-size: cover; */
-  /* background-position: center; */
+  background-image: url('https://img.freepik.com/foto-gratis/fondo-textura-pintura-veteada-liquida-pintura-fluida-textura-abstracta-mezcla-colores-intensos-papel-tapiz_1258-102867.jpg');
+  background-size: cover;
+  background-position: center;
 }
 
 .sobre-mi-section::before {
@@ -30,10 +29,10 @@
 .sobre-mi-section .container {
   position: relative;
   z-index: 2;
-  max-width: 1100px; /* Ancho un poco mayor para los recuadros */
+  max-width: 1100px;
   margin: 0 auto;
   padding: 0 25px;
-  text-align: center; /* Centra el título principal */
+  text-align: center;
 }
 
 .sobre-mi-title {
@@ -47,27 +46,27 @@
 /* Contenedor principal para los recuadros de contenido */
 .main-content-boxes {
   display: flex;
-  flex-wrap: wrap; /* Permite que los recuadros se envuelvan */
-  gap: 30px; /* Espacio entre los recuadros */
-  justify-content: center; /* Centra los recuadros */
-  margin-bottom: 50px; /* Espacio antes de la barra de redes sociales */
+  flex-wrap: wrap;
+  gap: 30px;
+  justify-content: center;
+  margin-bottom: 50px;
 }
 
 /* Estilo base para los recuadros (imagen+bio y habilidades) */
 .about-me-intro-box,
 .skills-box {
-  background-color: #2a2a38; /* Fondo de la caja, ligeramente más claro */
+  background-color: #2a2a38;
   border-radius: 15px;
   padding: 40px;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.6);
   color: #e0e0e0;
-  flex: 1; /* Permite que ocupen el espacio disponible */
-  min-width: 300px; /* Ancho mínimo antes de envolver */
-  max-width: 500px; /* Ancho máximo para cada recuadro */
-  display: flex; /* Para organizar el contenido interno */
-  flex-direction: column; /* Apila el contenido por defecto */
-  align-items: center; /* Centra el contenido horizontalmente dentro de la caja */
-  text-align: center; /* Centra el texto por defecto */
+  flex: 1;
+  min-width: 300px;
+  max-width: 500px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
 }
 
 /* Contenedor de la imagen de perfil */
@@ -78,14 +77,14 @@
 .profile-image {
   width: 180px;
   height: 180px;
-  border-radius: 50%; /* Circular */
+  border-radius: 50%;
   object-fit: cover;
-  border: 4px solid #9b0532; /* Borde de color acento */
-  box-shadow: 0 0 15px rgba(155, 5, 50, 0.5); /* Sombra luminosa */
+  border: 4px solid #9b0532;
+  box-shadow: 0 0 15px rgba(155, 5, 50, 0.5);
 }
 
 .bio-text {
-  text-align: left; /* Alinea el texto del bio a la izquierda */
+  text-align: left;
 }
 
 .bio-text p {
@@ -99,63 +98,82 @@
   margin-bottom: 0;
 }
 
-/* Sección de Habilidades */
+/* Sección de Habilidades - ¡NUEVOS ESTILOS! */
 .skills-box h2 {
   font-size: 2rem;
-  color: #9b0532; /* Color acento para subtítulos */
+  color: #9b0532;
   margin-bottom: 25px;
   text-align: center;
 }
 
-.skills-grid {
+.skills-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr)); /* Columnas responsivas */
+  gap: 20px; /* Espacio entre los ítems de habilidad */
+  width: 100%;
+}
+
+.skill-item {
+  background-color: #34344a;
+  border-radius: 10px;
+  padding: 20px 15px;
   display: flex;
-  flex-wrap: wrap;
-  gap: 15px;
-  justify-content: center; /* Centra las etiquetas de habilidades */
-}
-
-.skill-tag {
-  background-color: #34344a; /* Fondo para las etiquetas de habilidad */
-  color: #9b0532; /* Color de texto de la habilidad */
-  padding: 10px 20px;
-  border-radius: 25px;
-  font-size: 1rem;
+  flex-direction: column; /* Icono arriba, texto abajo */
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  color: #e0e0e0;
   font-weight: 500;
-  border: 1px solid #4a4a60;
-  transition: background-color 0.3s ease, transform 0.2s ease;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease;
+  border: 1px solid transparent; /* Para la animación del borde */
 }
 
-.skill-tag:hover {
+.skill-item:hover {
+  transform: translateY(-8px) scale(1.05); /* Efecto de levitación y ligero aumento */
   background-color: #4a4a60;
-  transform: translateY(-2px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5), 0 0 20px rgba(155, 5, 50, 0.7); /* Sombra y brillo acentuado */
+  border-color: #9b0532; /* Borde al pasar el mouse */
 }
 
-/* Barra de Redes Sociales (nueva sección abajo del todo) */
-.social-media-bar {
-  background-color: #2a2a38; /* Mismo fondo que las cajas de contenido */
+/* Si usas FontAwesome, estos estilos aplicarán al icono */
+.skill-item .skill-icon {
+  font-size: 2.5rem; /* Tamaño del icono */
+  color: #9b0532; /* Color del icono */
+  margin-bottom: 5px; /* Espacio entre icono y texto */
+}
+
+.skill-item .skill-text {
+  font-size: 1rem;
+  text-align: center;
+}
+
+/* Barra de Contacto y Redes Sociales - ¡NUEVOS ESTILOS! */
+.contact-info-bar {
+  background-color: #2a2a38;
   border-radius: 15px;
   padding: 30px;
   box-shadow: 0 8px 25px rgba(0, 0, 0, 0.5);
   text-align: center;
-  margin-top: 30px; /* Espacio superior */
-  width: 100%; /* Ocupa todo el ancho del contenedor */
+  margin-top: 30px;
+  width: 100%;
 }
 
-.social-media-bar h3 {
+.contact-info-bar h3 {
   font-size: 1.8rem;
   color: #fff;
   margin-bottom: 25px;
   text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
 }
 
-.social-links {
+.contact-links {
   display: flex;
   flex-wrap: wrap;
   gap: 20px;
-  justify-content: center; /* Centra los enlaces */
+  justify-content: center;
 }
 
-.social-link {
+.contact-link {
   display: inline-flex;
   align-items: center;
   padding: 12px 25px;
@@ -165,21 +183,40 @@
   font-size: 1.05rem;
   transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-  background-color: #34344a; /* Fondo para los enlaces */
-  color: #9b0532; /* Color del texto CAMBIADO */
+  background-color: #34344a;
+  color: #fff; /* Color de texto blanco para los enlaces */
+  position: relative;
+  overflow: hidden; /* Para el efecto de brillo */
 }
 
-.social-link:hover {
-  background-color: #4a4a60;
-  transform: translateY(-3px);
-  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
-  color: #9b0532; /* Mantiene el color de acento o un tono más vibrante si lo deseas */
-}
-
-.social-link i {
+.contact-link .contact-icon {
   margin-right: 10px;
   font-size: 1.3em;
+  color: #9b0532; /* Color del icono de acento */
 }
+
+.contact-link:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3), 0 0 15px rgba(155, 5, 50, 0.6); /* Sombra y brillo al pasar el mouse */
+  background-color: #4a4a60; /* Fondo más oscuro al pasar el mouse */
+}
+
+/* Efecto de brillo al pasar el mouse sobre los enlaces de contacto */
+.contact-link::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+  transition: all 0.6s ease;
+}
+
+.contact-link:hover::before {
+  left: 100%;
+}
+
 
 /* Responsividad */
 @media (max-width: 768px) {
@@ -187,16 +224,16 @@
     font-size: 2.8rem;
   }
   .main-content-boxes {
-    flex-direction: column; /* Apila los recuadros en pantallas pequeñas */
+    flex-direction: column;
     gap: 25px;
   }
   .about-me-intro-box,
   .skills-box {
-    max-width: 100%; /* Ocupa todo el ancho disponible */
+    max-width: 100%;
     padding: 30px;
   }
   .bio-text {
-    text-align: center; /* Centra el texto del bio en móviles */
+    text-align: center;
   }
   .bio-text p {
     font-size: 1.05rem;
@@ -204,8 +241,28 @@
   .skills-box h2 {
     font-size: 1.8rem;
   }
-  .social-media-bar {
+  .skills-list {
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr)); /* Más pequeñas en móviles */
+    gap: 15px;
+  }
+  .skill-item {
+    padding: 15px 10px;
+  }
+  .skill-item .skill-icon {
+    font-size: 2rem;
+  }
+  .skill-item .skill-text {
+    font-size: 0.9rem;
+  }
+  .contact-info-bar {
     padding: 25px;
+  }
+  .contact-info-bar h3 {
+    font-size: 1.6rem;
+  }
+  .contact-link {
+    font-size: 0.95rem;
+    padding: 10px 15px;
   }
 }
 
@@ -231,15 +288,17 @@
   .skills-box h2 {
     font-size: 1.6rem;
   }
-  .skill-tag {
+  .skills-list {
+    grid-template-columns: repeat(2, 1fr); /* 2 columnas en móviles muy pequeños */
+  }
+  .contact-info-bar h3 {
+    font-size: 1.4rem;
+  }
+  .contact-link {
     font-size: 0.9rem;
-    padding: 8px 15px;
+    padding: 8px 12px;
   }
-  .social-media-bar h3 {
-    font-size: 1.5rem;
-  }
-  .social-link {
-    font-size: 0.95rem;
-    padding: 10px 15px;
+  .contact-link .contact-icon {
+    font-size: 1.1em;
   }
 }
