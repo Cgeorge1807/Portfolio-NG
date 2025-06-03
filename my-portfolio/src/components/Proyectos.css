@@ -1,20 +1,15 @@
-/* --- Proyectos.css --- */
-
-/* Fondo de la sección Proyectos */
 .proyectos-bg {
   position: relative;
   min-height: 100vh;
-  /* La imagen de fondo la defines aquí. Asegúrate de que la ruta sea correcta. */
   background-image: url('https://img.freepik.com/fotos-premium/fondo-pantalla-hd-abstracto-diseno-color-degradado-violeta-liquido-metal-color-violeta-brillante-metal_542608-94.jpg');
   background-size: cover;
   background-position: center;
-  background-attachment: fixed; /* Hace que el fondo se quede fijo al hacer scroll */
+  background-attachment: fixed;
   overflow: hidden;
-  padding-top: 50px; /* Espacio superior para el contenido */
-  padding-bottom: 50px; /* Espacio inferior para el contenido */
+  padding-top: 50px;
+  padding-bottom: 50px;
 }
 
-/* Overlay con efecto oscuridad y desenfoque */
 .proyectos-bg::before {
   content: "";
   position: absolute;
@@ -22,49 +17,45 @@
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(0, 0, 0, 0.75); /* Un poco más oscuro para mejor contraste */
-  backdrop-filter: blur(8px);       /* Aumentar el desenfoque para un efecto más suave */
+  background: rgba(0, 0, 0, 0.75);
+  backdrop-filter: blur(8px);
   z-index: 1;
 }
 
-/* Contenedor principal de contenido (para elevarlo sobre el overlay) */
 .proyectos-content {
   position: relative;
-  z-index: 2; /* Asegura que el contenido esté por encima del overlay */
-  color: #f8f9fa; /* Color de texto claro para buen contraste */
+  z-index: 2;
+  color: #f8f9fa;
 }
 
-/* Título de la sección Proyectos */
 .proyectos-title {
-  font-size: 3rem; /* Tamaño de fuente más grande */
-  font-weight: 700; /* Negrita */
-  color: #fff; /* Blanco puro */
+  font-size: 3rem;
+  font-weight: 700;
+  color: #fff;
   text-align: center;
-  margin-bottom: 3rem !important; /* Más espacio abajo */
-  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5); /* Sombra de texto para pop */
+  margin-bottom: 3rem !important;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
 }
 
-/* --- Estilos de la Tarjeta de Proyecto --- */
 .project-card {
-  background-color: rgba(255, 255, 255, 0.08); /* Fondo de tarjeta semitransparente */
-  border: 1px solid rgba(255, 255, 255, 0.15); /* Borde sutil */
-  border-radius: 12px; /* Bordes más redondeados */
+  background-color: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 12px;
   overflow: hidden;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3); /* Sombra más pronunciada */
-  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Transición suave para hover */
-  display: flex; /* Para asegurar que el contenido dentro de la tarjeta se alinee bien */
-  flex-direction: column; /* Apila el contenido verticalmente */
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  display: flex;
+  flex-direction: column;
 }
 
 .project-card:hover {
-  transform: translateY(-5px); /* Pequeño levantamiento al pasar el ratón */
-  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4); /* Sombra más intensa al pasar el ratón */
+  transform: translateY(-5px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4);
 }
 
-/* Contenedor de la imagen de la tarjeta para control de aspecto */
 .card-img-wrapper {
     width: 100%;
-    height: 180px; /* Altura fija para todas las imágenes de tarjeta */
+    height: 180px;
     overflow: hidden;
     border-top-left-radius: 12px;
     border-top-right-radius: 12px;
@@ -73,62 +64,59 @@
 .project-card-img {
   width: 100%;
   height: 100%;
-  object-fit: cover; /* Asegura que la imagen cubra el área sin deformarse */
-  transition: transform 0.3s ease; /* Transición para el efecto hover */
+  object-fit: cover;
+  transition: transform 0.3s ease;
 }
 
 .project-card:hover .project-card-img {
-    transform: scale(1.05); /* Ligerísimo zoom al pasar el ratón */
+    transform: scale(1.05);
 }
 
-
 .project-card .card-body {
-  padding: 1.5rem; /* Espaciado interno generoso */
-  flex-grow: 1; /* Permite que el cuerpo de la tarjeta crezca y ocupe espacio */
+  padding: 1.5rem;
+  flex-grow: 1;
   display: flex;
   flex-direction: column;
-  justify-content: space-between; /* Espacia el título, descripción y botón */
+  justify-content: space-between;
 }
 
 .project-card-title {
-  color: #fff; /* Blanco para el título de la tarjeta */
-  font-size: 1.4rem; /* Tamaño de fuente del título de la tarjeta */
+  color: #fff;
+  font-size: 1.4rem;
   font-weight: 600;
   margin-bottom: 0.75rem;
 }
 
 .project-card-description {
-  color: #adb5bd; /* Gris claro para la descripción */
-  font-size: 0.95rem; /* Tamaño de fuente de la descripción */
+  color: #adb5bd;
+  font-size: 0.95rem;
   line-height: 1.5;
-  margin-bottom: 1rem; /* Espacio antes del botón */
-  /* Limita la altura del texto para evitar que desborde */
+  margin-bottom: 1rem;
   display: -webkit-box;
-  -webkit-line-clamp: 3; /* Muestra solo 3 líneas */
+  -webkit-line-clamp: 3;
   -webkit-box-orient: vertical;
   overflow: hidden;
   text-overflow: ellipsis;
 }
 
 .project-card-button {
-  background-color: #9b0532; ; /* Azul primario de Bootstrap */
+  background-color: #9b0532;
   border-color: #9b0532;
   font-weight: 500;
   padding: 0.6rem 1.2rem;
-  border-radius: 8px; /* Bordes redondeados para el botón */
+  border-radius: 8px;
   transition: background-color 0.3s ease, transform 0.2s ease;
-  width: 100%; /* Botón de ancho completo */
+  width: 100%;
 }
 
 .project-card-button:hover {
-  background-color: #9b0532; ; /* Azul más oscuro al pasar el ratón */
-  border-color: #9b0532; ;
-  transform: translateY(-2px); /* Pequeño levantamiento */
+  background-color: #9b0532;
+  border-color: #9b0532;
+  transform: translateY(-2px);
 }
 
-/* Botón "Volver a Proyectos" */
 .back-button {
-  background-color: #6c757d; /* Gris de Bootstrap */
+  background-color: #6c757d;
   border-color: #6c757d;
   font-weight: 500;
   padding: 0.75rem 1.5rem;
@@ -142,7 +130,6 @@
   transform: translateY(-2px);
 }
 
-/* Responsividad para pantallas pequeñas */
 @media (max-width: 768px) {
   .proyectos-title {
     font-size: 2.5rem;
@@ -154,9 +141,8 @@
     font-size: 0.9rem;
   }
   .col-lg-3, .col-md-6, .col-sm-6 {
-    /* En pantallas muy pequeñas, las tarjetas ocuparán todo el ancho */
     width: 100%;
-    max-width: 350px; /* Limita el ancho máximo para que no se estiren demasiado */
+    max-width: 350px;
     margin-left: auto;
     margin-right: auto;
   }

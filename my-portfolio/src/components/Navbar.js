@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import "./Navbar.css";
 
 function Navbar() {
-  const [isOpen, setIsOpen] = useState(false); // Estado para controlar si el menú móvil está abierto
+  const [isOpen, setIsOpen] = useState(false); 
 
   const toggleMenu = () => {
     setIsOpen(!isOpen);
@@ -19,13 +19,11 @@ function Navbar() {
             className="logo"
           />
         </div>
-        {/* Botón de hamburguesa para móviles */}
         <div className="hamburger" onClick={toggleMenu}>
           <div className="bar"></div>
           <div className="bar"></div>
           <div className="bar"></div>
         </div>
-        {/* Los enlaces de navegación ahora tienen una clase condicional */}
         <ul className={`nav-links ${isOpen ? "open" : ""}`}>
           <li>
             <Link to="/" onClick={() => setIsOpen(false)}>Inicio</Link>
