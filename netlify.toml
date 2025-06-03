@@ -1,0 +1,9 @@
+[build]
+  base = "my-portfolio"
+  command = "npm run build"
+  publish = "my-portfolio/build" # Deja esta ruta completa para que coincida con lo que Netlify espera
+
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
