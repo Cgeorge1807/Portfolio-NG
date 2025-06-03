@@ -1,7 +1,7 @@
 [build]
   base = "my-portfolio"
   command = "npm run build"
-  publish = "my-portfolio/build" # Deja esta ruta completa para que coincida con lo que Netlify espera
+  publish = "build" # ¡CAMBIA ESTO! Debe ser "build", no "my-portfolio/build"
 
 [[redirects]]
   from = "/*"
